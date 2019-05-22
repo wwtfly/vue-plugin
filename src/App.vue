@@ -1,5 +1,5 @@
 <template>
   <div id="app">
-    <infopad></infopad>
+    <infopad myname="kn"></infopad>
   </div>
 </template>
