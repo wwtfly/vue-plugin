@@ -10,6 +10,7 @@
   "dependencies": {
     "@vue/web-component-wrapper": "^1.2.0",
     "core-js": "^2.6.5",
+    "element-ui": "^2.8.2",
     "vue": "^2.6.10",
     "yarn": "^1.16.0"
   },

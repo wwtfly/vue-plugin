@@ -1,26 +1,36 @@
 <template>
     <div id="my-pad">
         <div id="my-info">
-            <h1>{{message}}</h1>
+            <span>通知</span>
+                <el-carousel 
+                indicator-position="none"
+                height="30px"
+                :interval=2000
+                >
+                    <!-- <el-carousel-item v-for="item in items" :key="item"> -->
+                    <el-carousel-item v-for="item in items" :key="item">
+                        <span>{{ item }}</span>
+                    </el-carousel-item>
+                </el-carousel>
         </div>
         <div id="my-content">
             <ul>
-                <li><a href="">链接</a></li>
-                <li><a href="">链接</a></li>
-                <li><a href="">链接</a></li>
-                <li><a href="">链接</a></li>
-                <li><a href="">链接</a></li>
+                <li v-for="(value,key,index,) in lis" :key=index><a :href=value>{{key}}</a></li>
             </ul>
         </div>
-        <input v-model="message"/>
+        <!-- <input v-model="message"/> -->
     </div>
 </template>
 <script>
 export default {
-    // props:{myname:String}
+    props:{ 
+            title_message:String,
+            li_message:Object,
+    },
     data: function(){
         return {
-            message: "key"
+            items:this.title_message.split(","),
+            lis:this.li_message,
         }
     }
 }
@@ -28,11 +38,25 @@ export default {
 
 <style scoped>
 #my-pad {
-    width: 100px;
+    width: 1000px;
     height: 500px;
-    background: green;
+    background-color: #f9fafc;
 }
 #my-info {
-    background: red;
+    position: relative;
+    background: #99a9bf;
+    height: 40px;
 }
+#my-info span{
+    position: relative;
+    float: left;
+    line-height: 40px;
+    margin-left:10px;
+    color:red;
+}
+/* #my-info div{
+    position: relative;
+    float: left;
+    height: 40px;
+} */
 </style>
