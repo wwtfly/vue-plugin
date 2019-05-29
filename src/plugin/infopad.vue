@@ -6,9 +6,10 @@
                 indicator-position="none"
                 height="30px"
                 :interval=2000
+                arrow=never
                 >
                     <!-- <el-carousel-item v-for="item in items" :key="item"> -->
-                    <el-carousel-item v-for="item in items" :key="item">
+                    <el-carousel-item v-for="(item,index) in items" :key="index">
                         <span>{{ item }}</span>
                     </el-carousel-item>
                 </el-carousel>
