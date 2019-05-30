@@ -1,0 +1,30 @@
+<meta charset="utf-8">
+<title>my-infopad demo</title>
+<script src="https://unpkg.com/vue"></script>
+<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script src="./my-infopad.umd.js"></script>
+
+<link rel="stylesheet" href="./my-infopad.css">
+
+
+<div id="app">
+  <infopad></infopad>
+
+</div>
+
+<script>
+new Vue({
+    el:'#app',
+    data: function() {
+        return{
+            title_message:"欢迎使用,这是新开发的插件",
+            li_message:{
+                    百度:"http://www.baidu.com",
+                    淘宝:"http://www.taobao.com",
+                    京东:"http://www.jd.com"
+            }
+        }
+    }
+    })
+</script>
