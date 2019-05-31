@@ -1,12 +1,13 @@
-import infopad from './infopad.vue'
+import InfoPad from './infopad.vue'
+
 const infopadplug={
     install:function(Vue){
-        Vue.component("infopad",infopad)
+        Vue.component('infopad',InfoPad)
     }
 }
-// global 情况下自动安装
+
 if (typeof window !== 'undefined' && window.Vue) {
-    window.Vue.use(infopadplug);
+    window.Vue.use(infopadplug)
 }
 // 导出模块
 export default infopadplug

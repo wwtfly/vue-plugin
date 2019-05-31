@@ -24,13 +24,14 @@
 </template>
 <script>
 export default {
+    name:'infopad',
     props:{ 
             title_message:String,
             li_message:Object,
     },
     data: function(){
         return {
-            items:this.title_message.split(","),
+            items:this.title_message,
             lis:this.li_message,
         }
     }
