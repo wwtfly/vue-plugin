@@ -1,8 +1,8 @@
-import InfoPad from './infopad.vue'
+import infopad from './infopad.vue'
 
 const infopadplug={
     install:function(Vue){
-        Vue.component('infopad',InfoPad)
+        Vue.component(infopad.name,infopad)
     }
 }
 

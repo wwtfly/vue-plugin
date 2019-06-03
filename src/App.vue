@@ -1,16 +1,31 @@
 <template>
   <div id="app">
-    <infopad :title_message="title_message" :li_message="li_message"></infopad></div>
+    <InfoPad :title_message="title_message" :message="message"/>
+  </div>
 </template>
+
 <script>
+import InfoPad from './plugin/infopad.vue'
+
 export default {
-  data(){
+  name:'app',
+  components:{
+    InfoPad
+  },
+  data (){
     return{
       title_message:"欢迎使用,这是新开发的插件",
-      li_message:{
-            百度:"http://www.baidu.com",
-            淘宝:"http://www.taobao.com",
-            京东:"http://www.jd.com"
+      message:{
+            新手指南:{
+                  百度:"http://www.baidu.com",
+                  淘宝:"http://www.taobao.com",
+                  京东:"http://www.jd.com"
+            },
+            常见问题:{
+                  百:"http://www.baidu.com",
+                  淘:"http://www.taobao.com",
+                  京:"http://www.jd.com"
+            }
       }
     }
   }

@@ -15,24 +15,28 @@
                 </el-carousel>
         </div>
         <div id="my-content">
+            <div class="pad" v-for="(value,key,index) in this.message" :key=index>
+                <span>{{key}}</span>
             <ul>
-                <li v-for="(value,key,index,) in lis" :key=index><a :href=value>{{key}}</a></li>
+                <li v-for="(value,key,i) in value" :key=i><a :href=value>{{key}}</a></li>
             </ul>
+            </div>
         </div>
         <!-- <input v-model="message"/> -->
     </div>
 </template>
+
 <script>
 export default {
-    name:'infopad',
+    name:'InfoPad',
     props:{ 
             title_message:String,
-            li_message:Object,
+            message:Object,
     },
-    data: function(){
+    data (){
         return {
-            items:this.title_message,
-            lis:this.li_message,
+            items:this.title_message.split(','),
+            // lis:this.li_message,
         }
     }
 }
@@ -40,13 +44,14 @@ export default {
 
 <style scoped>
 #my-pad {
-    width: 1000px;
-    height: 500px;
-    background-color: #f9fafc;
+    width: auto;
+    height: 120px;
+    font-size: 15px;
+
+    /* background-color: #f9fafc; */
 }
 #my-info {
     position: relative;
-    background: #99a9bf;
     height: 40px;
 }
 #my-info span{
