@@ -5,7 +5,7 @@
                 <el-carousel 
                 indicator-position="none"
                 height="30px"
-                :interval=2000
+                :interval=5000
                 arrow=never
                 >
                     <!-- <el-carousel-item v-for="item in items" :key="item"> -->
@@ -43,10 +43,14 @@ export default {
 </script>
 
 <style scoped>
+body,html{
+    font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,SimSun,sans-serif;
+}
 #my-pad {
     width: auto;
     height: 120px;
-    font-size: 15px;
+    font-size: 14px;
+    background:transparent;
 
     /* background-color: #f9fafc; */
 }
@@ -59,7 +63,8 @@ export default {
     float: left;
     line-height: 40px;
     margin-left:10px;
-    color:red;
+    color:#f54747;
+    font-weight: 500;
 }
 #my-content{
     position: relative;
@@ -76,20 +81,23 @@ export default {
     text-align: center;
     display: block;
     width:200px;
+    color:#5e6d82
 }
 .pad ul{
     width:200px;
-    border-right: solid 1px gray;
+    border-right: solid 1px #dcdfe6;
     margin: 0px;
     padding:0px;
 }
 .pad ul li{
     display: inline;
     margin-right: 10px;
+    list-style: none;
     /* padding: 0px 20px; */
 }
 .pad ul li a {
     text-decoration: none;
+    color:#409eff;
 }
 /* #my-info div{
     position: relative;

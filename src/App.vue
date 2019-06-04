@@ -25,6 +25,11 @@ export default {
                   百:"http://www.baidu.com",
                   淘:"http://www.taobao.com",
                   京:"http://www.jd.com"
+            },
+            问题提单:{
+                  百:"http://www.baidu.com",
+                  淘:"http://www.taobao.com",
+                  京:"http://www.jd.com"
             }
       }
     }
