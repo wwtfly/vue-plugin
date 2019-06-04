@@ -61,6 +61,36 @@ export default {
     margin-left:10px;
     color:red;
 }
+#my-content{
+    position: relative;
+    padding-left: 10px;
+}
+.pad{
+    position: relative;
+    float: left;
+    width:200px;
+    margin-right:5px;
+    height:100px;
+}
+.pad span{
+    text-align: center;
+    display: block;
+    width:200px;
+}
+.pad ul{
+    width:200px;
+    border-right: solid 1px gray;
+    margin: 0px;
+    padding:0px;
+}
+.pad ul li{
+    display: inline;
+    margin-right: 10px;
+    /* padding: 0px 20px; */
+}
+.pad ul li a {
+    text-decoration: none;
+}
 /* #my-info div{
     position: relative;
     float: left;
