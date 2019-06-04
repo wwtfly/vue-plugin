@@ -1,16 +1,19 @@
 <template>
   <div id="app">
     <PadInfo :title_message="title_message" :message="message"/>
+    <ContainerInfo/>
   </div>
 </template>
 
 <script>
 import PadInfo from './plugin/PadInfo.vue'
+import ContainerInfo from './plugin/ContainerInfo.vue'
 
 export default {
   name:'app',
   components:{
-    PadInfo
+    PadInfo,
+    ContainerInfo
   },
   data (){
     return{
