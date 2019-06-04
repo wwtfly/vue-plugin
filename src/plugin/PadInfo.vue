@@ -28,7 +28,7 @@
 
 <script>
 export default {
-    name:'InfoPad',
+    name:'PadInfo',
     props:{ 
             title_message:String,
             message:Object,

@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <InfoPad :title_message="title_message" :message="message"/>
+    <PadInfo :title_message="title_message" :message="message"/>
   </div>
 </template>
 
 <script>
-import InfoPad from './plugin/infopad.vue'
+import PadInfo from './plugin/PadInfo.vue'
 
 export default {
   name:'app',
   components:{
-    InfoPad
+    PadInfo
   },
   data (){
     return{
