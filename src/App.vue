@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <PadInfo :title_message="title_message" :message="message"/>
-    <ContainerInfo/>
+    <PadInfo :title_message="title_message" :message="message" />
+    <ContainerInfo />
   </div>
 </template>
 
@@ -20,9 +20,9 @@ export default {
       title_message:"欢迎使用,这是新开发的插件",
       message:{
             新手指南:{
-                  百度:"http://www.baidu.com",
-                  淘宝:"http://www.taobao.com",
-                  京东:"http://www.jd.com"
+                  百度百度百度百度百度:"http://www.baidu.com",
+                  淘宝淘宝淘宝淘宝淘宝淘宝淘宝:"http://www.taobao.com",
+                  京东京东京东京东京东京东:"http://www.jd.com"
             },
             常见问题:{
                   百:"http://www.baidu.com",
