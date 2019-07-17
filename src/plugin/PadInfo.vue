@@ -1,39 +1,45 @@
 <template>
-  <div id="my-pad">
-    <div id="my-info">
-      <span>通知</span>
-      <el-carousel
-        indicator-position="none"
-        height="30px"
-        :interval="5000"
-        arrow="never"
-      >
-        <!-- <el-carousel-item v-for="item in items" :key="item"> -->
-        <el-carousel-item v-for="(item, index) in items" :key="index">
-          <span>{{ item }}</span>
-        </el-carousel-item>
-      </el-carousel>
-    </div>
-    <div id="my-content">
-      <div class="pad" v-for="(value, key, index) in this.message" :key="index">
-        <span>{{ key }}</span>
-        <ul>
-          <li v-for="(value, key, i) in value" :key="i">
-            <el-tooltip
-              popper-class="test"
-              effect="dark"
-              placement="top-start"
-              visible-arrow
-            >
-              <span slot="content">{{ key }}</span>
-              <a :href="value">{{ key }}</a>
-            </el-tooltip>
-          </li>
-        </ul>
+  <el-card body-style="padding:10px">
+    <div id="my-pad">
+      <div id="my-info">
+        <span>通知</span>
+        <el-carousel
+          indicator-position="none"
+          height="30px"
+          :interval="5000"
+          arrow="never"
+        >
+          <!-- <el-carousel-item v-for="item in items" :key="item"> -->
+          <el-carousel-item v-for="(item, index) in items" :key="index">
+            <span>{{ item }}</span>
+          </el-carousel-item>
+        </el-carousel>
       </div>
+      <div id="my-content">
+        <div
+          class="pad"
+          v-for="(value, key, index) in this.message"
+          :key="index"
+        >
+          <h3>{{ key }}</h3>
+          <ul>
+            <li v-for="(value, key, i) in value" :key="i">
+              <el-tooltip
+                popper-class="test"
+                effect="dark"
+                placement="top-start"
+                visible-arrow
+              >
+                <span slot="content">{{ key }}</span>
+                <a :href="value">{{ key }}</a>
+              </el-tooltip>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- <input v-model="message"/> -->
     </div>
-    <!-- <input v-model="message"/> -->
-  </div>
+  </el-card>
 </template>
 
 <script>
@@ -60,7 +66,7 @@ html {
 }
 #my-pad {
   width: auto;
-  height: 120px;
+  height: 160px;
   font-size: 14px;
   background: transparent;
 
@@ -80,13 +86,14 @@ html {
 }
 #my-content {
   position: relative;
-  padding-left: 10px;
+  /* padding-left: 10px; */
 }
 .pad {
   position: relative;
   float: left;
   width: 200px;
-  margin-right: 5px;
+  /* margin-right: 5px; */
+  padding: 0px 10px 10px 10px;
   height: 100px;
 }
 .pad span {
@@ -94,6 +101,9 @@ html {
   display: block;
   width: 200px;
   color: #5e6d82;
+}
+.pad h3 {
+  margin-top: 5px;
 }
 .pad ul {
   width: 200px;
