@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <PadInfo :title_message="title_message" :message="message" />
-    <ContainerInfo />
+    <ContainerInfo :containers="containers"></ContainerInfo>
   </div>
 </template>
 
@@ -34,7 +34,8 @@ export default {
                   淘:"http://www.taobao.com",
                   京:"http://www.jd.com"
             }
-      }
+      },
+      containers:['Test1','Test2','Test3','Test4']
     }
   }
 }

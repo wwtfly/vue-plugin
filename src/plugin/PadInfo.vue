@@ -35,6 +35,7 @@
               </el-tooltip>
             </li>
           </ul>
+          <el-divider direction="vertical" style="height:10px"></el-divider>
         </div>
       </div>
       <!-- <input v-model="message"/> -->
